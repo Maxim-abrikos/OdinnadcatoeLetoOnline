@@ -1,0 +1,76 @@
+@page
+@model OdinnadcatoeLetoOnline.Pages.IndexModel
+@{
+    ViewData["Title"] = "Игра профориентации";
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('@Model.BackgroundImage');
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+        color: white;
+    }
+
+
+    .content-wrapper {
+        background-color: rgba(0, 0, 0, 0.6);
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .download-button {
+        background-color: #4CAF50;
+        border: none;
+        padding: 15px 30px;
+        color: white;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .download-button:hover {
+            background-color: #45a049;
+    }
+
+
+    .top-nav {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        z-index: 10;
+    }
+
+        .top-nav a {
+            color: white;
+            margin-left: 20px;
+            font-size: 28px;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+            .top-nav a:hover {
+                transform: scale(1.2);
+            }
+
+</style>
+
+
+<nav class="top-nav">
+    <a href="/About" title="О разработчиках">👤</a>
+    <a href="/Changelog" title="Хроника обновлений">📜</a>
+</nav>
+
+<div class="content-wrapper">
+    <h1>Добро пожаловать!</h1>
+    <p>Это игра для профориентации абитуриентов. Исследуйте карту, решайте задачи!</p>
+
+    <a href="/?handler=Download" class="download-button">Скачать игру</a>
+    <p>Игра скачана <strong>@Model.DownloadCount</strong> раз(а)</p>
+</div>

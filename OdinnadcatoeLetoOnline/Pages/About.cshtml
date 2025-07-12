@@ -1,0 +1,97 @@
+﻿@page
+@model OdinnadcatoeLetoOnline.Pages.AboutModel
+@{
+    ViewData["Title"] = "О разработчиках";
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        font-family: sans-serif;
+        color: white;
+    }
+
+    .top-nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .top-nav a {
+        color: white;
+        margin: 0 15px;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .developer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .developer {
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 20px;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+        .developer img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 30px;
+            object-fit: cover;
+            border: 2px solid #4CAF50;
+        }
+
+    .dev-text {
+        color: white;
+        max-width: 600px;
+    }
+
+        .dev-text p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+</style>
+
+<nav class="top-nav">
+    <a href="/">🏠</a>
+    <a href="/Changelog">📜</a>
+</nav>
+
+<h1 style="text-align:center;">О разработчиках</h1>
+
+<div class="developer-container">
+    <div class="developer">
+        <img src="/images/developers/dev1.jpg" alt="Разработчик 1">
+        <div class="dev-text">
+            <p><strong>Максим Ядров</strong></p>
+            <p>Креативный директор, гейм-дизайнер. Отвечает за внешний вид локаций, визуальное оформление игры и пользовательский интерфейс. Финалист четвёртого сезона ТвойХод трека “Делаю”</p>
+        </div>
+    </div>
+
+    <div class="developer">
+        <img src="/images/developers/dev2.jpg" alt="Разработчик 2">
+        <div class="dev-text">
+            <p><strong>Данил Хаустов</strong></p>
+            <p>Разработчик алгоритмов. Отвечает за распознавание игрой текста игрока, систему сохранений, генерации систем частиц и LOD'ов.</p>
+        </div>
+    </div>
+
+    <div class="developer">
+        <img src="/images/developers/dev3.jpg" alt="Разработчик 3">
+        <div class="dev-text">
+            <p><strong>Максим Шаталов</strong></p>
+            <p>Разработчик физики. Отвечает за взаимодействие игрока с миром игры, обработку событий и оптимизацию нагрузки на "железо"</p>
+        </div>
+    </div>
+</div>
+
