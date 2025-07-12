@@ -4,6 +4,6 @@ services:
     runtime: dotnet
     buildCommand: dotnet publish -c Release -o out
     startCommand: dotnet out/OdinnadcatoeLetoOnline.dll
-    buildFilter:
-      paths:
-        - '**/*'
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
