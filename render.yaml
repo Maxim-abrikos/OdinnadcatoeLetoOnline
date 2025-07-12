@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: odinnadcatoe-leto
+    runtime: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/OdinnadcatoeLetoOnline.dll
+    buildFilter:
+      paths:
+        - '**/*'
